@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import { render } from 'react-dom';
 import request from 'superagent';
 
 import CustomerForm from './CustomerForm';
 import CustomerTable from './CustomerTable';
 
-class Customer extends React.Component {
+class Customer extends Component {
    constructor(props) {
       super(props)
 

@@ -1,19 +1,19 @@
 module.exports = {
-  entry: './src/index.js',
-  output: {
-     path: __dirname + '/dist',
-     filename: 'bundle.js'
-  },
-  module: {
-     loaders: [
-        {
-           test: /.js?$/,
-           loader: 'babel-loader',
-           exclude: /node_modules/,
-           query: {
-              presets: ['es2015', 'react']
-           }
-        }
-     ]
-  }
+   entry: './src/index.js',
+   output: {
+      path: __dirname + '/dist',
+      filename: 'bundle.js'
+   },
+   module: {
+      rules: [
+         {
+            test: /.js?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            options: {
+               presets: ['@babel/preset-env', '@babel/preset-react']
+            }
+         }
+      ]
+   }
 }
